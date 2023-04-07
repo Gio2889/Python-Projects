@@ -1,7 +1,0 @@
-LATTICE
-   SPCGRGP=FM-3M
-     UNITS=A
-     ALAT=3.597
-     PLAT= 0.5 0.5 0.0 0.5 0.0 0.5 0.0 0.5 0.5
-SITE
-   ATOM=Cu X= 0.0 0.0 0.0

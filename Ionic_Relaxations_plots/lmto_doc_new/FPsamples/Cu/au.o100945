@@ -1,0 +1,8 @@
+The master node of this job is node028
+The working directory is /home1/gbaez/LMTO_tutorial/lmto_doc_new/FPsamples/Cu
+The node file is /var/spool/PBS/aux//100945.head
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+This job runs on the following nodes:
+node028 node028 node028 node028
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+This job has allocated 4 nodes

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#PBS -N au
+#PBS -q default
+#PBS -l nodes=4
+export NPROCS=`wc -l $PBS_NODEFILE |gawk '//{print $1}'`
+
+JOBNUM=$(echo $PBS_JOBID | cut -f 1 -d .)
+echo The master node of this job is `hostname`
+echo The working directory is `echo $PBS_O_WORKDIR`
+echo The node file is $PBS_NODEFILE
+echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+echo This job runs on the following nodes:
+echo `cat $PBS_NODEFILE`
+echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+echo This job has allocated $NPROCS nodes
+
+cd $PBS_O_WORKDIR
+#/home/kdbel/lmsuite/lm-7.11f/lmchk crtl.cu > lmchk.out
+/home/kdbel/lmsuite/lm-7.11f/lmfa ctrl.cu > lmfa.out
+#/home/kdbel/lmsuite/lm-7.11f/lmstr ctrl.cu > lmstr.out
+#/home/kdbel/lmsuite/lm-7.11e/lmstr -vxco=0.05 fe2p > lmstr.out
+#/home/kdbel/lmsuite/lm-7.11f/lm ctrl.cu > lm.out
+#/home/kdbel/lmsuite/lm-7.11e/lm cu --band:fn=syml
+#/home/kdbel/bin/plbands -ef=0 co 
+#/home/kdbel/lmsuite/lm-7.11e/lmdos co
+#/usr/bin/mpiexec -comm=pmi -np $NPROCS /home/kdbel/lmsuite/lm-7.11e/lmgf-MPIK -vnit=1000 -vxco=0.05 -vnk=12 -vnkz=20 --pr45 -vbeta=0.05 -vbefffe=0  -vangles=2 fe2p|tee lmgf.out > $JOBNUM.dat
+

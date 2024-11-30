@@ -2,7 +2,7 @@
 import discord
 from discord.ext import commands
 from datetime import datetime
-bottoken='ODI2ODQ2MTgxNTY4NDEzNzI1.Goe0q5.4wMTXHvHxc-fhn2DrGNj46-DAR8kDjP8HwtfHM'
+bottoken='******'
 myid='Bohique#2687'
 client = discord.Client(intents = discord.Intents(messages=True,message_content=True, guilds=True,members=True))
 

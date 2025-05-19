@@ -1,4 +1,4 @@
-######token-ODI2ODQ2MTgxNTY4NDEzNzI1.Goe0q5.4wMTXHvHxc-fhn2DrGNj46-DAR8kDjP8HwtfHM
+
 import discord
 from discord.ext import commands
 from datetime import datetime
@@ -38,9 +38,7 @@ async def on_ready():
      # Set the guild (server) object
     guild = client.guilds[0]
     print('Selected Server: '+ str(guild))
-    #member = discord.utils.get(guild.members, name='Bohique')
-    member = guild.get_member(140699542860464128)
-    #member = discord.utils.get(guild.members, id='140699542860464128')
+    member = guild.get_member('******')
     print('Selected Member: '+ str(member))
     print(str(member.name)+" "+ str(member.id))
     # Create a dictionary of Discord IDs to Discord usernames
